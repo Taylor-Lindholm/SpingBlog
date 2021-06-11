@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+</head>
+<body>
+<nav th:replace="partials/navbar :: bootStrap_nav"></nav>
+
+
+<h1>Hello, <span th:text="${name}">World</span>!</h1>
+
+<div th:if="${user.firstName ==  'Sam'}">
+
+  <p>He's alright</p>
+
+</div>
+
+<div th:each="user : ${users}">
+  <p th:text="{user.fullName}"></p>
+</div>
+
+<p> First name: <span th:text="${user.firstName}" </p>
+</body>
+</html>
