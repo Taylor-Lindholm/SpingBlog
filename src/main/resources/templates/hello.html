@@ -7,6 +7,11 @@
 <body>
 <nav th:replace="partials/navbar :: bootStrap_nav"></nav>
 
+CREATE DATABASE IF NOT EXISTS adlister_db;
+
+CREATE USER spring_adlister_user@localhost IDENTIFIED BY 'p@$$w0rd';
+GRANT ALL ON spring_adlister_db.* TO adlister_user@localhost;
+
 
 <h1>Hello, <span th:text="${name}">World</span>!</h1>
 
